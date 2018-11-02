@@ -1,7 +1,7 @@
 int solenoid = 6;
 int ir_receiver = 4;
 
-const long interval = 1000;
+const long interval = 1000; //the value is a number of milliseconds, i.e. 1 Second
  
 void setup() {
   
@@ -16,12 +16,12 @@ int value = digitalRead(ir_receiver);
 unsigned long currentMillis = millis();
 
 if(value == HIGH) {
-Serial.println("Value is high");
+Serial.println("Value is High");
 digitalWrite(solenoid, HIGH);
 }
 
 else {
-Serial.println("Value is low");
+Serial.println("Value is Low");
 digitalWrite(solenoid, LOW);
 }
 
